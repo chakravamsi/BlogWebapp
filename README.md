@@ -53,3 +53,12 @@ BlogWebApp is a responsive full-stack blogging web application where users can r
 Our-Blogs/
 ├── blogwebsite/        # Frontend (React + Vite)
 └── blogserver/         # Backend (Node.js + Express)
+
+---
+
+## 📸 Demo
+
+Here's a preview of the Blog Website:
+
+![Blog Website Screenshot](./BlogWebsite.png)
+
