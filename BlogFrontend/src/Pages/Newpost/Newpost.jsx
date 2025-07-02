@@ -84,9 +84,9 @@ const Newpost = () => {
             }
         }
 
-        const blogPost = {
-            ...postData,
-            imageURL,
+         const blogPost = {
+        ...postData,
+        imageURL: imageURL || "",
         };
 
         fetch(`${baseURL}/blog/newBlog`, {
