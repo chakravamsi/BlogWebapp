@@ -60,5 +60,7 @@ Our-Blogs/
 
 Here's a preview of the Blog Website:
 
-![Blog Website Screenshot](./BlogWebsite.png)
+<p align="center">
+  <img src="./BlogWebsite.png" alt="Desktop View" width="600">
+</p>
 
