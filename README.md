@@ -47,6 +47,14 @@ BlogWebApp is a responsive full-stack blogging web application where users can r
 
 ---
 
+Here's a preview of the Blog Website:
+
+<p align="center">
+  <img src="./BlogWebsite.png" alt="Desktop View" width="600">
+</p>
+
+---
+
 ## 📦 Project Structure
 
 ```bash
@@ -54,13 +62,5 @@ Our-Blogs/
 ├── blogwebsite/        # Frontend (React + Vite)
 └── blogserver/         # Backend (Node.js + Express)
 
----
 
-## 📸 Demo
-
-Here's a preview of the Blog Website:
-
-<p align="center">
-  <img src="./BlogWebsite.png" alt="Desktop View" width="600">
-</p>
 
