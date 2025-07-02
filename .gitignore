@@ -1,0 +1,14 @@
+# Global node_modules ignores
+BlogBackend/node_modules/
+BlogFrontend/node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# ENV files
+BlogBackend/.env
+BlogFrontend/.env
+
+# Builds
+BlogFrontend/dist/
