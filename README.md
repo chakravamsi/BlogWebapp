@@ -52,6 +52,7 @@ BlogWebApp is a responsive full-stack blogging web application where users can r
 Here's a preview of the Blog Website:
 
 ![Blog Website Screenshot](./Desktop1.png)
+![Blog Website Screenshot](./Desktop2.png)
 
 
 ---
