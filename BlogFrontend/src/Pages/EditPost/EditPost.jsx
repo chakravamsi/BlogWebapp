@@ -1,8 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import imageCompression from 'browser-image-compression';
-import './EditPost.css'
+import './EditPost.css';
+
 const baseURL = import.meta.env.VITE_API_BASE;
+const cloudName = import.meta.env.VITE_CLOUD_NAME;
+const uploadPreset = import.meta.env.VITE_CLOUD_PRESET;
 
 const Editpost = () => {
     const { id } = useParams();
@@ -53,10 +56,10 @@ const Editpost = () => {
 
                 const formData = new FormData();
                 formData.append("file", compressedFile);
-                formData.append("upload_preset", "blog_upload");
-                formData.append("cloud_name", "dza2skjr0");
+                formData.append("upload_preset", uploadPreset);
+                formData.append("cloud_name", cloudName);
 
-                const res = await fetch("https://api.cloudinary.com/v1_1/dza2skjr0/image/upload", {
+                const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
                     method: "POST",
                     body: formData,
                 });
@@ -76,7 +79,7 @@ const Editpost = () => {
             body: JSON.stringify({ ...postData, imageURL: updatedImageURL })
         })
             .then(res => res.json())
-            .then(data => {
+            .then(() => {
                 alert("Post updated successfully");
                 navigate('/Myposts');
             })
@@ -104,15 +107,11 @@ const Editpost = () => {
             <label>Title</label>
             <input className="form-control" name="title" value={postData.title} onChange={handleInput} />
 
-            
             <label>Upload New Image</label>
             <input type="file" accept="image/*" className="form-control" onChange={(e) => setImageFile(e.target.files[0])} ref={fileInputRef} />
 
-
-
             <label>Content</label>
             <textarea className="form-control" rows={8} name="content" value={postData.content} onChange={handleInput} />
-
 
             <button className="btn btn-primary mt-3 w-100" onClick={handleUpdate} disabled={isUpdating}>
                 {isUpdating ? "Updating..." : "Update"}
