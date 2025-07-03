@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .d-flex.flex-wrap.row-gap-5 {
+    justify-content: center !important;
+  }
+}
