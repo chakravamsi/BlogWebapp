@@ -1,6 +1,7 @@
 import Banner from "../../Components/Banner/Banner";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import './Home.css';
 const baseURL = import.meta.env.VITE_API_BASE;
 function Home() {
     useEffect(()=>{
