@@ -64,13 +64,14 @@ const Newpost = () => {
                 const formData = new FormData();
                 formData.append("file", compressedFile);
                 formData.append("upload_preset", import.meta.env.VITE_CLOUD_PRESET);
-                formData.append("cloud_name", import.meta.env.VITE_CLOUD_NAME);
 
 
-                const res = await fetch("https://api.cloudinary.com/v1_1/dza2skjr0/image/upload", {
-                    method: "POST",
-                    body: formData,
+                const cloudName = import.meta.env.VITE_CLOUD_NAME;
+                const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+                method: "POST",
+                body: formData,
                 });
+
 
                 const data = await res.json();
                 imageURL = data.secure_url;
